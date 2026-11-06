@@ -33,6 +33,8 @@ Git と GitHub の基本的な使い方は、[self-intro の Git/GitHub はじ�
 | Supabase（PostgreSQL、RLS） | オンラインランキング用のデータベース | #18〜#22 |
 | 環境変数 / GitHub Secrets | 接続情報をコードに直接書かずに管理する | #20 |
 
+ツールの詳しい説明（何をするものか、なぜ入れたか、よく使うコマンド、つまずいたこと）は、[handbook の docs/tools.md](https://github.com/kyoto-dev-circle/handbook/blob/main/docs/tools.md) にまとめています。
+
 ## 3. 作るもの
 
 | ゲーム | 内容 | 良いスコア | 担当 |
