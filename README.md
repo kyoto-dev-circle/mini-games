@@ -162,3 +162,20 @@ Phase 0（self-intro）のルールをそのまま引き継ぎます。追加・
 
 教材は [MDN の JavaScript ガイド](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide) の「文法とデータ型」「制御フローとエラー処理」「関数」あたりがおすすめです。
 分からないところは Slack の #questions で聞くか、Claude に聞いてください。
+
+## 9. 開発の始め方
+
+はじめて clone したら、リポジトリのフォルダで次のコマンドを実行して、開発に使う道具をインストールします。
+
+```
+npm install
+```
+
+画面を見るときは、次のコマンドで開発用サーバーを起動します。
+
+```
+npm run dev
+```
+
+ターミナルに表示される URL（`http://localhost:5173/` など）をブラウザで開くと、画面が見られます。
+止めるときは、ターミナルで `Ctrl + C` を押します。
