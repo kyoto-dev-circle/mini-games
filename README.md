@@ -177,5 +177,5 @@ npm install
 npm run dev
 ```
 
-ターミナルに表示される URL（`http://localhost:5173/` など）をブラウザで開くと、画面が見られます。
+ターミナルに表示される URL（`http://localhost:5173/mini-games/` など）をブラウザで開くと、画面が見られます。
 止めるときは、ターミナルで `Ctrl + C` を押します。
