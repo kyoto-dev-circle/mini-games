@@ -1,0 +1,57 @@
+# CD：main に push されたとき（PR をマージしたとき）に、ビルドして GitHub Pages に公開する
+name: Deploy
+
+on:
+  # main に push されたときに動く。PR のときは動かない（PR のチェックは ci.yml）
+  push:
+    branches: [main]
+  # 「Actions」タブのボタンから手で動かせるようにする（やり直したいとき用）
+  workflow_dispatch:
+
+# GitHub Pages に公開するために必要な権限
+permissions:
+  # リポジトリの中身を読む
+  contents: read
+  # Pages に公開する
+  pages: write
+  # 公開する人が本当にこのリポジトリのワークフローかを、GitHub に証明する
+  id-token: write
+
+# 公開が2つ同時に動かないようにする（続けてマージしたら、順番に公開する）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # 1つ目の仕事：ビルドして、できた dist/ を Pages 用にアップロードする
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # リポジトリのファイルを取ってくる
+      - uses: actions/checkout@v7
+      # Node.js を準備する（ci.yml と同じ）
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+      # package-lock.json のとおりにインストールする
+      - run: npm ci
+      # 公開用のファイルを dist/ に作る
+      - run: npm run build
+      # dist/ を Pages 用にまとめてアップロードする
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  # 2つ目の仕事：アップロードしたものを公開する
+  deploy:
+    # build が成功してから動く
+    needs: build
+    runs-on: ubuntu-latest
+    # 「Environments」の github-pages に、公開の記録と URL を残す
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
