@@ -1,0 +1,49 @@
+/* 4つのページで共通のデザイン */
+:root {
+  --color-text: #222;
+  --color-bg: #f7f7f5;
+  --color-main: #2563eb;
+  --color-main-dark: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+#app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 16px;
+}
+
+a {
+  color: var(--color-main);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--color-main);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-main-dark);
+}
