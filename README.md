@@ -5,7 +5,7 @@ Kyoto Dev Circle ミニゲーム集（Phase 1）
 Phase 0 では Git と GitHub を使ったチーム開発の流れ（Issue → ブランチ → PR → レビュー → マージ）を身につけました。
 Phase 1 では、その流れの上で、実際の開発現場で使われている技術を一つずつ取り入れながら、ミニゲーム集の Web サイトを作ります。
 
-- 公開URL（完成後）：https://kyoto-dev-circle.github.io/mini-games/
+- 公開URL：https://kyoto-dev-circle.github.io/mini-games/ （main にマージすると、数分後に自動で更新される）
 - メンバー：はやと（standwind8810）、かもむつ（kamomutsu09-spec）
 - 期間の目安：2026年11月9日〜2027年1月中旬（8スプリント、1スプリント＝1週間）
 - やること：[Issues](https://github.com/kyoto-dev-circle/mini-games/issues)（#1〜#23）、[マイルストーン](https://github.com/kyoto-dev-circle/mini-games/milestones)
