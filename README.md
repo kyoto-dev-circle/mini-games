@@ -129,7 +129,7 @@ mini-games/
 
 Phase 0（self-intro）のルールをそのまま引き継ぎます。追加・変更点は太字の部分です。
 
-- 作業は必ず Issue から始め、`feature/#Issue番号-内容` のブランチを作って PR を出す（**バグ修正は `fix/#番号-内容`**）
+- 作業は必ず Issue から始め、**`feature/#Issue番号` のブランチ**（例：`feature/#10`）を作って PR を出す（**バグ修正は `fix/#Issue番号`**）
 - コミットメッセージは `feat:`、`fix:`、`docs:`、`style:`、**`test:`（テストの追加・修正）、`ci:`（GitHub Actions の変更）、`refactor:`（動きを変えない整理）、`chore:`（設定や依存パッケージの変更）**で始める
 - PR を出すときは Reviewers に相方を設定する。**レビューの依頼は、Slack の DM で相方に PR のリンクを送って頼む（#github チャンネルは使わない）**
 - マージには、もう1人の Approve が必要。マージは PR を出した本人が「Merge pull request」で行う（はやとのバイパスは Phase 0 と同じ）
