@@ -9,6 +9,22 @@
   <body>
     <main id="app">
       <h1>数当て</h1>
+      <p id="rule"></p>
+
+      <form id="guess-form" novalidate>
+        <label for="guess-input">予想</label>
+        <input id="guess-input" type="number" autocomplete="off" />
+        <button type="submit" id="guess-button">予想する</button>
+      </form>
+
+      <p id="message"></p>
+      <p>回数：<span id="count">0</span> 回</p>
+
+      <div id="result" hidden>
+        <p id="result-text"></p>
+        <button type="button" id="retry-button">もう一度</button>
+      </div>
+
       <a href="../../">メニューに戻る</a>
     </main>
     <script type="module" src="./main.js"></script>
